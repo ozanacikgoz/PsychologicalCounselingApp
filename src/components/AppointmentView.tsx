@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageCircle, Lock, Calendar, ShieldCheck, ArrowRight } from 'lucide-react';
+import { whatsappUrl } from '../constants/contact';
 
 export default function AppointmentView() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -56,7 +57,10 @@ export default function AppointmentView() {
             </div>
 
             <a 
-              href="#" 
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="WhatsApp üzerinden randevu alın"
               className="relative z-10 flex items-center justify-center gap-3 w-full bg-primary text-on-primary py-5 rounded-full text-lg font-semibold hover:scale-[0.98] active:scale-95 transition-all duration-500 shadow-xl shadow-primary/10"
             >
               <MessageCircle size={20} />

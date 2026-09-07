@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Menu } from 'lucide-react';
 import HomeView from './components/HomeView';
 import AppointmentView from './components/AppointmentView';
+import { whatsappUrl } from './constants/contact';
 
 export default function App() {
   const [currentView, setCurrentView] = useState<'home' | 'appointment'>('home');
@@ -56,7 +57,14 @@ export default function App() {
         <div className="flex gap-8 text-text-muted font-body text-sm">
           <a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Gizlilik Politikası</a>
           <a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Kullanım Koşulları</a>
-          <a href="#" className="underline hover:text-primary transition-colors">WhatsApp Destek</a>
+          <a
+            href={whatsappUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline hover:text-primary transition-colors"
+          >
+            WhatsApp Destek
+          </a>
         </div>
         <p className="font-body text-sm text-text-muted mt-4">
           © 2026 Hande Özgödek. Tüm hakları saklıdır.
