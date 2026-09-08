@@ -104,7 +104,7 @@ export default function AppointmentView() {
               <div className="flex -space-x-3">
                 <img 
                   src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgU3_YijHa87uyH0Q58Gda4Jjv3Kx4zxuv8aTsZBX_E6T5IaNVNp8eeevS-bU4J_mDoWnN72ZjlwEl1eT4xr06FCZ9XE0xQEhP-LOTmxYub81fIMz_Rvhfjl67Qa2BESFURlsx7DMes_hiiVPtcBv-kdmpjsK-bHt5IiVBFfcuAN8vEQ0V1hadRH1TkMI-VlYx6G-RAg4_GKHeFkpb-VX4fBT6bW9MaXd12rS_9BncBIQE4rnpC5tAioJQE0-NwA4DKQZzEKSy-SU" 
-                  alt="Psk. Hande Özgödek"
+                  alt="Hande Özgödek"
                   className="w-12 h-12 rounded-full border-2 border-surface object-cover"
                   referrerPolicy="no-referrer"
                 />

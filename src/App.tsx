@@ -16,7 +16,7 @@ export default function App() {
             className="text-2xl font-bold text-primary font-headline tracking-tight cursor-pointer"
             onClick={() => setCurrentView('home')}
           >
-            Psk. Hande Özgödek
+            Uzman Psikolojik Danışman Hande Özgödek
           </div>
           
           <div className="hidden md:flex space-x-8 items-center font-headline tracking-tight font-medium">
@@ -52,7 +52,7 @@ export default function App() {
       {/* Footer */}
       <footer className="w-full mt-auto bg-surface-low flex flex-col items-center py-12 px-6 space-y-4">
         <div className="text-lg font-semibold text-primary font-headline">
-          Psk. Hande Özgödek
+          Uzman Psikolojik Danışman Hande Özgödek
         </div>
         <div className="flex gap-8 text-text-muted font-body text-sm">
           <a href="#" className="opacity-80 hover:opacity-100 transition-opacity">Gizlilik Politikası</a>
