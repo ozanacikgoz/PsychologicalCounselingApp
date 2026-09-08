@@ -108,7 +108,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-12"
+              className="scroll-mt-24 space-y-12"
             >
               <div className="bg-surface p-10 rounded-[2.5rem] shadow-editorial border border-outline-ghost">
                 <h3 className="text-2xl font-bold mb-8">Akademik Altyapım ve Uzmanlık Eğitimlerim</h3>
