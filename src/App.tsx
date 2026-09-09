@@ -7,6 +7,15 @@ import { whatsappUrl } from './constants/contact';
 export default function App() {
   const [currentView, setCurrentView] = useState<'home' | 'appointment'>('home');
 
+  const navigateTo = (view: 'home' | 'appointment') => {
+    if (window.location.hash) {
+      window.history.replaceState(null, '', `${window.location.pathname}${window.location.search}`);
+    }
+
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+    setCurrentView(view);
+  };
+
   return (
     <div className="min-h-screen flex flex-col selection:bg-primary-dim selection:text-text-main">
       {/* Navigation */}
@@ -14,14 +23,14 @@ export default function App() {
         <div className="flex justify-between items-center px-8 py-4 max-w-7xl mx-auto">
           <div 
             className="text-2xl font-bold text-primary font-headline tracking-tight cursor-pointer"
-            onClick={() => setCurrentView('home')}
+            onClick={() => navigateTo('home')}
           >
             Uzman Psikolojik Danışman Hande Özgödek
           </div>
           
           <div className="hidden md:flex space-x-8 items-center font-headline tracking-tight font-medium">
             <button 
-              onClick={() => setCurrentView('home')}
+              onClick={() => navigateTo('home')}
               className={`transition-all duration-500 ease-in-out ${
                 currentView === 'home' 
                   ? 'text-primary border-b-2 border-primary pb-1' 
@@ -31,7 +40,7 @@ export default function App() {
               Hakkında
             </button>
             <button 
-              onClick={() => setCurrentView('appointment')}
+              onClick={() => navigateTo('appointment')}
               className="bg-primary text-on-primary px-6 py-2 rounded-full font-medium hover:scale-95 duration-300 transition-all"
             >
               Randevu Al
@@ -46,7 +55,7 @@ export default function App() {
 
       {/* Main Content Area */}
       <main className="flex-grow pt-32 pb-20">
-        {currentView === 'home' ? <HomeView onNavigate={setCurrentView} /> : <AppointmentView />}
+        {currentView === 'home' ? <HomeView onNavigate={navigateTo} /> : <AppointmentView />}
       </main>
 
       {/* Footer */}
