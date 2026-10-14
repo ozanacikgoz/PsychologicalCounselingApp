@@ -26,7 +26,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               <span className="text-primary italic">Güvenli Bir Liman.</span>
             </h1>
             <p className="text-lg text-text-muted leading-relaxed max-w-xl mb-10">
-              Çocukluk ve ergenlik dönemi; dikkat, duygu ve davranış gelişiminin en yoğun yaşandığı süreçtir. Bu dönemlerde yaşanan güçlüklerde bilimsel temelli yaklaşımlarla yanınızdayım.
+              Kendinizi anlamak, yaşadığınız güçlükleri paylaşmak ve yeni yollar keşfetmek için buradayım. Çocuklar, ergenler, yetişkinler ve ebeveynlerle online psikolojik danışmanlık görüşmeleri yapıyorum.
             </p>
             <div className="flex gap-4">
               <button 
@@ -58,10 +58,6 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 referrerPolicy="no-referrer"
               />
             </div>
-            <div className="absolute -bottom-8 -left-8 bg-surface p-8 rounded-2xl shadow-editorial max-w-[240px] hidden md:block border border-outline-ghost">
-              <p className="text-primary font-bold text-4xl mb-1">10+</p>
-              <p className="text-sm text-text-muted font-medium">Yıllık Klinik Deneyim ve Yüzlerce Başarı Hikayesi</p>
-            </div>
           </motion.div>
         </div>
       </section>
@@ -79,7 +75,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               <h2 className="text-primary font-medium mb-4">Uzman Psikolojik Danışman</h2>
               <h3 className="text-5xl font-bold mb-8 tracking-tight leading-tight">Hande Özgödek</h3>
               <div className="space-y-6 text-lg text-text-muted leading-relaxed">
-                <p>Ben Uzman Psikolojik Danışman Hande Özgödek. Çalışmalarımı özellikle Dikkat Eksikliği ve Hiperaktivite (DEHB), davranış düzenleme ve duygu yönetimi alanında yoğunlaştırmaktayım.</p>
+                <p>Ben Uzman Psikolojik Danışman Hande Özgödek. Çocuklar, ergenler, yetişkinler ve ebeveynlerle çalışıyorum. Mesleki deneyimim ağırlıklı olarak çocuklarla; özellikle Dikkat Eksikliği ve Hiperaktivite (DEHB), dikkat, duygu ve davranış düzenleme alanlarında şekillendi.</p>
                 <p>2014 yılında Uluslararası Kıbrıs Üniversitesi Psikolojik Danışmanlık ve Rehberlik bölümünden mezun oldum. Ardından Ege Üniversitesi'nde yüksek lisans eğitimimi tamamlayarak akademik ve uygulamalı bilgimi derinleştirdim.</p>
                 <p>Özellikle DEHB ve dikkat sorunlarında yalnızca çocukla değil, aile sistemiyle birlikte çalışırım. Çünkü dikkat ve davranış düzenleme süreci; ebeveyn tutumları, sınırlar ve günlük yapı ile doğrudan ilişkilidir.</p>
               </div>
@@ -88,10 +84,10 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
                 <h4 className="text-xl font-bold mb-6 text-text-main">Seans Sürecimde Amacım;</h4>
                 <ul className="space-y-2">
                   {[
-                    "Çocuğun güçlü yönlerini ortaya çıkarmak",
-                    "Dikkat ve öz düzenleme becerilerini geliştirmek",
-                    "Aileye sürdürülebilir davranış yönetimi desteği sunmak",
-                    "Okul süreci ile iş birliği kurmak"
+                    "Güçlü yönlerinizi ve ihtiyaçlarınızı birlikte keşfetmek",
+                    "Duygularınızı anlamanıza ve ifade etmenize destek olmak",
+                    "Günlük yaşamınızdaki güçlükler için birlikte yollar geliştirmek",
+                    "Çocuklarla çalışırken ebeveynleri de sürece dahil etmek"
                   ].map((item, i) => (
                     <li key={i} className="flex items-start gap-3">
                       <Check className="text-primary w-6 h-6 shrink-0" />
@@ -167,7 +163,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
         <div className="flex flex-col md:flex-row justify-between items-end mb-8 gap-8">
           <div className="max-w-2xl">
             <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight">Değerlerim ve Yaklaşımım</h2>
-            <p className="text-text-muted text-lg">Her çocuk biriciktir. Bu nedenle çalışmaları standart kalıplar yerine bireysel ihtiyaçlara göre planlıyorum.</p>
+            <p className="text-text-muted text-lg">Her insanın hikâyesi ve ihtiyaçları farklıdır. Görüşmelerimizi sizin yaşamınıza, beklentilerinize ve ilerleme hızınıza göre birlikte şekillendiriyorum.</p>
           </div>
         </div>
         
@@ -182,15 +178,15 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
             },
             {
               icon: HeartHandshake,
-              title: "Aile İş Birliği",
-              desc: "DEHB ve dikkat süreçlerinde bilimsel temelli, yapılandırılmış ve aile iş birliğine dayalı bir model uyguluyorum.",
+              title: "Birlikte Çalışmak",
+              desc: "Sizi dinleyerek hedeflerimizi birlikte belirliyorum. Çocuklarla yürüttüğüm çalışmalarda ebeveynlerle iş birliğine önem veriyorum.",
               bg: "bg-tertiary-container",
               iconColor: "text-tertiary"
             },
             {
               icon: Users,
               title: "Bireysel Odak",
-              desc: "Karşıyaka'daki ofisimde ve online olarak çocuk, ergen ve ailelerle bireysel ihtiyaçlar doğrultusunda çalışmaktayım.",
+              desc: "Tüm görüşmelerimizi online gerçekleştiriyorum. Çocuk, ergen ve yetişkinlerle yapılan çalışmaları bireysel ihtiyaçlara göre planlıyorum.",
               bg: "bg-secondary-dim",
               iconColor: "text-secondary"
             }
@@ -219,7 +215,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           <div className="bg-surface-high/30 backdrop-blur-xl border border-white/40 p-16 md:p-24 rounded-[4rem] text-center relative">
             <Quote className="text-primary/20 w-24 h-24 absolute top-10 left-10" />
             <h4 className="text-3xl md:text-4xl font-headline font-medium text-text-main leading-snug italic">
-              "Her çocuk biriciktir. Bu nedenle çalışmaları standart kalıplar yerine bireysel ihtiyaçlara göre planlar, o tohumun yeşermesi için gerekli suyu ve ışığı sağlarız."
+              "Her hikâye dinlenmeyi hak eder. Kendinizi anlamak ve size uygun yolları keşfetmek için birlikte bir alan açabiliriz."
             </h4>
           </div>
         </div>
@@ -231,7 +227,7 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
           <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full -mr-48 -mt-48 blur-3xl"></div>
           <div className="z-10 max-w-xl">
             <h2 className="text-4xl font-bold mb-4 tracking-tight">Huzura giden yolda ilk adımı bugün atın.</h2>
-            <p className="opacity-80 text-lg">Ücretsiz bir ön görüşme planlamak veya bilgi almak için bana ulaşabilirsiniz.</p>
+            <p className="opacity-80 text-lg">Yaklaşık 10 dakikalık ücretsiz online tanışma görüşmesinde birbirimizi tanıyalım, beklentilerinizi konuşalım ve nasıl ilerleyebileceğimizi birlikte değerlendirelim.</p>
           </div>
           <div className="z-10 w-full md:w-auto flex flex-col sm:flex-row gap-4">
             <button 

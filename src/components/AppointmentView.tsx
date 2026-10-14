@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { MessageCircle, Lock, Calendar, ShieldCheck, ArrowRight } from 'lucide-react';
 import { whatsappUrl } from '../constants/contact';
+import handeImage from '../assets/HandeImage.png';
 
 export default function AppointmentView() {
   const [openFaq, setOpenFaq] = useState<number | null>(null);
@@ -9,15 +10,15 @@ export default function AppointmentView() {
   const faqs = [
     {
       question: "Randevu süreci nasıl işler?",
-      answer: "Öncelikle WhatsApp üzerinden iletişime geçerek size en uygun saati belirliyoruz. İlk görüşmemizde süreci planlıyor ve değerlendirme aşamasına geçiyoruz."
+      answer: "WhatsApp üzerinden uygun bir zaman belirleyerek yaklaşık 10 dakikalık ücretsiz online tanışma görüşmesi yapıyoruz. Birbirimizi tanıyor, ihtiyaçlarınızı ve beklentilerinizi konuşuyoruz. Devam etme zorunluluğunuz yoktur."
     },
     {
-      question: "Seanslar ne kadar sürer?",
-      answer: "Standart seanslarımız 50 dakika sürmektedir. Çocuklarla yapılan çalışmalarda bu süre çocuğun dikkat süresine göre esneklik gösterebilir."
+      question: "İlk görüşme ücretli mi?",
+      answer: "Yaklaşık 10 dakikalık tanışma görüşmesi ücretsizdir. Devam etmek isterseniz sonraki görüşmelerin süresini, sıklığını ve ücretini birlikte netleştiririz."
     },
     {
-      question: "Online seans seçeneği var mı?",
-      answer: "Evet, ergen ve yetişkin danışanlarımız için online seans seçeneğimiz bulunmaktadır. Çocuklarla olan çalışmalarda ise yüz yüze görüşmeyi tercih ediyoruz."
+      question: "Görüşmeler kimler için ve nerede gerçekleşiyor?",
+      answer: "Çocuklar, ergenler, yetişkinler ve ebeveynlerle çalışıyorum. Tüm görüşmeler online gerçekleşir. Deneyimim ağırlıklı olarak çocuk danışmanlığında şekillendi. Çocuklarla yapılacak çalışmalarda katılımı ve ebeveynin rolünü birlikte planlarız."
     }
   ];
 
@@ -33,13 +34,13 @@ export default function AppointmentView() {
         >
           <div className="space-y-6">
             <span className="inline-block px-4 py-1.5 rounded-full bg-tertiary-container text-tertiary text-sm font-medium tracking-wide">
-              Sizin İçin Buradayım
+              Online · Yaklaşık 10 dakika · Ücretsiz
             </span>
             <h1 className="text-5xl md:text-6xl font-headline font-extrabold text-text-main leading-[1.1] tracking-tight">
-              Hemen Randevu <span className="text-primary italic">Alın</span>
+              İlk adımımız <span className="text-primary italic">tanışmak olsun.</span>
             </h1>
             <p className="text-lg text-text-muted max-w-lg leading-relaxed font-body">
-              İçsel huzura giden yolculuğunuzda size rehberlik etmek için sabırsızlanıyorum. Profesyonel danışmanlık hizmetlerim için bir tık uzağınızdayım.
+              Kendiniz veya çocuğunuz için destek arıyorsanız, önce birbirimizi tanıyalım. Yaklaşık 10 dakikalık ücretsiz online görüşmede beklentilerinizi konuşabilir, sorularınızı sorabilir ve birlikte nasıl ilerleyebileceğimizi değerlendirebiliriz.
             </p>
           </div>
 
@@ -52,7 +53,7 @@ export default function AppointmentView() {
               </div>
               <div className="space-y-1">
                 <h3 className="font-headline font-bold text-xl text-text-main">WhatsApp ile Hızlı Planlama</h3>
-                <p className="text-sm text-text-muted">Doğrudan benimle iletişime geçin ve size en uygun saati belirleyelim.</p>
+                <p className="text-sm text-text-muted">Ücretsiz online tanışma görüşmeniz için bana ulaşın; uygun bir gün ve saat belirleyelim.</p>
               </div>
             </div>
 
@@ -64,7 +65,7 @@ export default function AppointmentView() {
               className="relative z-10 flex items-center justify-center gap-3 w-full bg-primary text-on-primary py-5 rounded-full text-lg font-semibold hover:scale-[0.98] active:scale-95 transition-all duration-500 shadow-xl shadow-primary/10"
             >
               <MessageCircle size={20} />
-              WhatsApp Üzerinden Randevu Al
+              Tanışma Görüşmesi Planla
             </a>
 
             <p className="relative z-10 text-center text-xs text-text-muted font-medium flex items-center justify-center gap-2">
@@ -76,7 +77,7 @@ export default function AppointmentView() {
           <div className="grid grid-cols-2 gap-6">
             <div className="flex items-center gap-3">
               <Calendar className="text-primary w-6 h-6" />
-              <span className="text-sm font-medium text-text-main">Esnek Saatler</span>
+              <span className="text-sm font-medium text-text-main">Tüm görüşmeler online</span>
             </div>
             <div className="flex items-center gap-3">
               <ShieldCheck className="text-primary w-6 h-6" />
@@ -92,27 +93,12 @@ export default function AppointmentView() {
           className="relative hidden md:block"
         >
           <div className="aspect-[4/5] rounded-[3rem] overflow-hidden shadow-2xl">
-            <img 
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeJgebYfHUZ-LKWV3rZz3K007wYyR5G7HVSbONbKhB6h6W3B7wKjGE-nQ_R0DhJ4PqtYyZEY3l2BukZ-CaaFHieb3lk6rFSlwaBkb91DkU73KESCW5XnS5A2JAu4Mw5-tFm-kL-CaK2DlRb_mS5XyRe-_Ui45maVw2a_XHS7QHKvMoX7WtF6BSqYv_4liYk4JQoWdzHeLW6epNJk1v7NGqigy5IvPWC67Mr61_br_868Zzhlg4WtAHw0er80SiHn-NzoY7CEDDER8" 
-              alt="Therapeutic Space" 
-              className="w-full h-full object-cover"
-              referrerPolicy="no-referrer"
-            />
+            <img src={handeImage} alt="Uzman Psikolojik Danışman Hande Özgödek" className="w-full h-full object-cover" />
           </div>
-          <div className="absolute -bottom-10 -left-10 bg-surface-high p-10 rounded-[2rem] shadow-editorial max-w-[280px] border border-outline-ghost">
-            <div className="space-y-4">
-              <div className="flex -space-x-3">
-                <img 
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuAgU3_YijHa87uyH0Q58Gda4Jjv3Kx4zxuv8aTsZBX_E6T5IaNVNp8eeevS-bU4J_mDoWnN72ZjlwEl1eT4xr06FCZ9XE0xQEhP-LOTmxYub81fIMz_Rvhfjl67Qa2BESFURlsx7DMes_hiiVPtcBv-kdmpjsK-bHt5IiVBFfcuAN8vEQ0V1hadRH1TkMI-VlYx6G-RAg4_GKHeFkpb-VX4fBT6bW9MaXd12rS_9BncBIQE4rnpC5tAioJQE0-NwA4DKQZzEKSy-SU" 
-                  alt="Hande Özgödek"
-                  className="w-12 h-12 rounded-full border-2 border-surface object-cover"
-                  referrerPolicy="no-referrer"
-                />
-              </div>
-              <p className="text-sm font-medium leading-tight text-text-main">
-                100+ Danışanım için huzurlu bir yol haritası çizdik.
-              </p>
-            </div>
+          <div className="mt-6 px-2">
+            <p className="text-xl font-bold text-primary">Hande Özgödek</p>
+            <p className="text-text-muted mt-2">Çocuklar, ergenler, yetişkinler ve ebeveynlerle online danışmanlık.</p>
+            <p className="text-sm text-text-muted mt-2">Ağırlıklı deneyim alanım çocuk danışmanlığıdır.</p>
           </div>
         </motion.div>
       </section>
