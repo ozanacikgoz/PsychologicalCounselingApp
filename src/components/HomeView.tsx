@@ -197,12 +197,12 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: i * 0.1 }}
-              className="bg-surface p-10 rounded-[2rem] shadow-editorial border border-outline-ghost transition-transform hover:-translate-y-2 duration-500"
+              className="bg-surface p-6 md:p-10 rounded-[2rem] shadow-editorial border border-outline-ghost transition-transform hover:-translate-y-2 duration-500"
             >
-              <div className={`w-14 h-14 ${item.bg} rounded-2xl flex items-center justify-center mb-8`}>
+              <div className={`w-10 h-10 md:w-14 md:h-14 ${item.bg} rounded-xl md:rounded-2xl flex items-center justify-center mb-4 md:mb-8`}>
                 <item.icon className={item.iconColor} size={24} />
               </div>
-              <h3 className="text-2xl font-bold mb-4">{item.title}</h3>
+              <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4">{item.title}</h3>
               <p className="text-text-muted leading-relaxed">{item.desc}</p>
             </motion.div>
           ))}
@@ -212,9 +212,9 @@ export default function HomeView({ onNavigate }: HomeViewProps) {
       {/* Reflective Quote */}
       <section className="pt-2">
         <div className="max-w-5xl mx-auto px-8">
-          <div className="bg-surface-high/30 backdrop-blur-xl border border-white/40 p-16 md:p-24 rounded-[4rem] text-center relative">
-            <Quote className="text-primary/20 w-24 h-24 absolute top-10 left-10" />
-            <h4 className="text-3xl md:text-4xl font-headline font-medium text-text-main leading-snug italic">
+          <div className="bg-surface-high/30 backdrop-blur-xl border border-white/40 p-6 md:p-24 rounded-[2rem] md:rounded-[4rem] text-center relative">
+            <Quote className="text-primary/20 w-10 h-10 md:w-24 md:h-24 absolute top-4 left-4 md:top-10 md:left-10" />
+            <h4 className="text-xl md:text-4xl font-headline font-medium text-text-main leading-snug italic relative">
               "Her hikâye dinlenmeyi hak eder. Kendinizi anlamak ve size uygun yolları keşfetmek için birlikte bir alan açabiliriz."
             </h4>
           </div>
